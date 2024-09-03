@@ -1,0 +1,34 @@
+{
+    "environment": {
+        "POLARS_AUTO_STRUCTIFY": null,
+        "POLARS_FMT_MAX_COLS": null,
+        "POLARS_FMT_MAX_ROWS": "15",
+        "POLARS_FMT_NUM_DECIMAL": null,
+        "POLARS_FMT_NUM_GROUP_SEPARATOR": null,
+        "POLARS_FMT_NUM_LEN": null,
+        "POLARS_FMT_STR_LEN": "45",
+        "POLARS_FMT_TABLE_CELL_ALIGNMENT": null,
+        "POLARS_FMT_TABLE_CELL_LIST_LEN": null,
+        "POLARS_FMT_TABLE_CELL_NUMERIC_ALIGNMENT": null,
+        "POLARS_FMT_TABLE_DATAFRAME_SHAPE_BELOW": null,
+        "POLARS_FMT_TABLE_FORMATTING": null,
+        "POLARS_FMT_TABLE_HIDE_COLUMN_DATA_TYPES": null,
+        "POLARS_FMT_TABLE_HIDE_COLUMN_NAMES": null,
+        "POLARS_FMT_TABLE_HIDE_COLUMN_SEPARATOR": null,
+        "POLARS_FMT_TABLE_HIDE_DATAFRAME_SHAPE_INFORMATION": null,
+        "POLARS_FMT_TABLE_INLINE_COLUMN_DATA_TYPE": null,
+        "POLARS_FMT_TABLE_ROUNDED_CORNERS": null,
+        "POLARS_MAX_EXPR_DEPTH": null,
+        "POLARS_STREAMING_CHUNK_SIZE": null,
+        "POLARS_TABLE_WIDTH": null,
+        "POLARS_VERBOSE": null,
+        "POLARS_WARN_UNSTABLE": null
+    },
+    "direct": {
+        "set_fmt_float": "mixed",
+        "set_float_precision": null,
+        "set_thousands_separator": "",
+        "set_decimal_separator": ".",
+        "set_trim_decimal_zeros": false
+    }
+}

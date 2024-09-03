@@ -1,1 +1,1 @@
-# arc-agi-human-performance
+# H-ARC
