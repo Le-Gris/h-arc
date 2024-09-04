@@ -4,7 +4,7 @@ import hashlib
 
 
 def parse_mixed_datetime(datetime_str):
-    formats = ["%m/%d/%Y, %I:%M:%S %p", "%m/%d/%Y, %H:%M:%S"]
+    formats = ["%m/%d/%Y, %I:%M:%S %p", "%m/%d/%Y, %H:%M:%S", "%Y-%m-%d %H:%M:%S.%f"]
     for fmt in formats:
         try:
             return dt.strptime(datetime_str, fmt)
@@ -49,7 +49,6 @@ def get_summary(df, verbose=False):
             "hashed_id",
             "task_name",
             "joint_id_task",
-            "worker_id",
             "task_number",
             "attempt_number",
             "action",
