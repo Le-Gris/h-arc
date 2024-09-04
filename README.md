@@ -116,9 +116,13 @@ This notebook examines learning effects across tasks using mixed-effects logisti
 
 This notebook focuses on analyzing incomplete task attempts, comparing performance metrics between participants who completed all tasks and those who didn't, and examining factors that might contribute to task incompletion.
 
+#### 7-human-machine-comparison.ipynb
+
+This notebook compares the performance of human participants with that of algorithmic solutions to evaluation set ARC tasks. It analyzes success rates, error patterns, and solution strategies between humans and AI systems.
+
 ## Processing Kaggle Submission
 
-Follow these steps to process a Kaggle submission file:
+Follow these steps to process a Kaggle submission file. This will faciliate downstreat human-machine comparisons.
 
 1. Create the necessary directories:
 
