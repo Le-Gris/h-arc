@@ -6,10 +6,10 @@ __pycache__
 .DS_Store
 
 # data
-data/kaggle_solutions/greenblatt
-data/ARC_evaluation_tasks_ordered.json
-data/ARC_training_tasks_ordered.json
-data/ARC_evaluation_tasks_order.csv
-data/ARC_training_tasks_order.csv
+data/
 
+# excluded analyses
+analysis/excluded/
 
+# some source code
+src/make_dataset_csv.py
