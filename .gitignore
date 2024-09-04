@@ -13,3 +13,5 @@ analysis/excluded/
 
 # some source code
 src/make_dataset_csv.py
+
+figures/
