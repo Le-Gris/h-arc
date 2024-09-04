@@ -4,7 +4,7 @@ This repository contains the H-ARC dataset and preliminary analyses reported in 
 
 Participant responses, natural language descriptions, errors and state space graphs can all be explored visually on our [project webpage](https://arc-visualizations.github.io/index.html).
 
-H-ARC consists of action by action traces of humans solving ARC tasks from the both the training and evaluation sets using an interface and setup similar François Chollet's initial proposal. The original dataset can be found [here](https://github.com/fchollet/ARC-AGI).
+H-ARC consists of action by action traces of humans solving ARC tasks from the both the training and evaluation sets using an interface and setup similar to François Chollet's initial proposal. The original dataset can be found [here](https://github.com/fchollet/ARC-AGI).
 
 ## Citing our work
 
@@ -73,7 +73,7 @@ After extraction, you should see several CSV files in the `data` folder.
 
 ## Dataset
 
-The H-ARC dataset consists of several CSV files containing different aspects of human performance on the Abstraction and Reasoning Corpus (ARC) tasks.
+The H-ARC dataset consists of several CSV files containing different aspects of human performance on ARC tasks.
 
 All files are in CSV format. The main files include:
 
@@ -95,6 +95,7 @@ For more detailed information about the dataset, see [Dataset description](data/
 Follow these steps to process a Kaggle submission file:
 
 1. Create the necessary directories:
+
    ```bash
    mkdir -p data/kaggle_solutions/claude3_5-langchain
    ```

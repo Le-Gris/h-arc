@@ -2,7 +2,7 @@
 
 This document describes the H-ARC dataset.
 
-## Main Data Files
+## Main data files
 
 ### clean_data.csv and clean_data_incomplete.csv
 
@@ -82,6 +82,8 @@ These files contain error information for complete and incomplete participant da
 | hashed_output_grid | Hashed version of the output grid         |
 | task_type          | Type of task (training or evaluation set) |
 | count              | Number of occurrences of this error       |
+
+## Other data files
 
 ### clean_feedback_data.csv
 
