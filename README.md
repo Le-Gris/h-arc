@@ -88,7 +88,33 @@ For more detailed information about the dataset, see [Dataset description](data/
 
 ## Analyses
 
+We include in this repository the main Jupyter notebooks used to compute reported results from our paper.
+
 ### Notebooks
+
+#### 0-arc-dataset.ipynb
+
+This notebook looks at some aspects of the ARC dataset structure.
+
+#### 1-basic-results.ipynb
+
+This notebook computes basic performance metrics on the H-ARC dataset, including overall solve rates, action counts, and time-related statistics for both training and evaluation tasks.
+
+#### 3-misc.ipynb
+
+This notebook contains miscellaneous analyses, including participant counts for different experimental conditions and various data processing steps.
+
+#### 4-errors.ipynb
+
+This notebook analyzes error patterns in participant responses, including copy errors and other common mistake types across both training and evaluation tasks.
+
+#### 5-learning.ipynb
+
+This notebook examines learning effects across tasks using mixed-effects logistic regression models. It analyzes how task success rates change as participants progress through the experiment.
+
+#### 6-incomplete-data-analysis.ipynb
+
+This notebook focuses on analyzing incomplete task attempts, comparing performance metrics between participants who completed all tasks and those who didn't, and examining factors that might contribute to task incompletion.
 
 ## Processing Kaggle Submission
 
