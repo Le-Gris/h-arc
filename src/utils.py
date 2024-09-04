@@ -13,7 +13,7 @@ def parse_mixed_datetime(datetime_str):
     return None
 
 
-def get_summary(df):
+def get_summary(df, verbose=False):
     """Get ARC summary data frame by filtering out traces where last action is invalid"""
     # list of final actions
     final_actions = [
@@ -40,9 +40,10 @@ def get_summary(df):
         .top_k_by("num_actions", k=1)
         .over(["joint_id_task", "attempt_number"], mapping_strategy="explode")
     )
-    print(
-        f"Filtered out {df.n_unique('joint_id_task') - df_summary.n_unique('joint_id_task')}/{df.n_unique('joint_id_task')} incomplete participant task attempts"
-    )
+    if verbose:
+        print(
+            f"Filtered out {df.n_unique('joint_id_task') - df_summary.n_unique('joint_id_task')}/{df.n_unique('joint_id_task')} incomplete participant task attempts"
+        )
     df_summary = df_summary[
         [
             "hashed_id",
@@ -96,15 +97,19 @@ def grid2str(grid):
     return grid_str
 
 
-def include_incomplete(df_summary, df_incomplete):
+def include_incomplete(df_summary, df_incomplete, verbose=False):
     df_summary = df_summary.drop("condition")
-    df_incomplete_summary = get_summary(df_incomplete)
+    df_incomplete_summary = get_summary(df_incomplete, verbose=verbose)
     df_incomplete_summary = df_incomplete_summary.select(df_summary.columns)
     df_summary = df_summary.with_columns(pl.lit(False).alias("incomplete"))
     df_incomplete_summary = df_incomplete_summary.with_columns(
         pl.lit(True).alias("incomplete")
     )
     df_summary = df_summary.vstack(df_incomplete_summary)
+    if verbose:
+        print(
+            f"Included {df_incomplete_summary.n_unique('joint_id_task')}/{df_incomplete.n_unique('joint_id_task')} incomplete participant task attempts"
+        )
     return df_summary, df_incomplete_summary
 
 
