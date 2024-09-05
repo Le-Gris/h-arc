@@ -126,7 +126,7 @@ This notebook compares the performance of human participants with that of algori
 
 ## Processing Kaggle Submission
 
-Follow these steps to process a Kaggle submission file. This will faciliate downstream human-machine comparisons.
+Follow these steps to process a Kaggle submission file. This will faciliate downstream human-machine comparisons. Here we use the "Claude-3.5 (Baseline)" approach from the [ARC Prize leaderboard](https://arcprize.org/leaderboard) as an example.
 
 1. Create the necessary directories:
 
@@ -144,7 +144,7 @@ Follow these steps to process a Kaggle submission file. This will faciliate down
    python src/kaggle_submision_to_csv.py --submission_id claude3_5-langchain
    ```
 
-This will process the JSON file and create a CSV file in the same directory.
+This will process the JSON file and create a CSV file in the same directory with a similar format to our human data.
 
 ## License
 
