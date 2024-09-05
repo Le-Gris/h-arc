@@ -92,37 +92,41 @@ We include in this repository the main Jupyter notebooks used to compute reporte
 
 ### Notebooks
 
-#### 0-arc-dataset.ipynb
+#### [0-arc-dataset.ipynb](analysis/0-arc-dataset.ipynb)
 
 This notebook looks at some aspects of the ARC dataset structure.
 
-#### 1-basic-results.ipynb
+#### [1-basic-results](analysis/1-basic-results.ipynb)
 
 This notebook computes basic performance metrics on the H-ARC dataset, including overall solve rates, action counts, and time-related statistics for both training and evaluation tasks.
 
-#### 3-misc.ipynb
+#### [2-demogrpahics](analysis/2-demographics.ipynb)
+
+This notebook looks at some basic demographics data from our pool of participants.
+
+#### [3-misc](analysis/3-misc.ipynb)
 
 This notebook contains miscellaneous analyses, including participant counts for different experimental conditions and various data processing steps.
 
-#### 4-errors.ipynb
+#### [4-errors](analysis/4-errors.ipynb)
 
 This notebook analyzes error patterns in participant responses, including copy errors and other common mistake types across both training and evaluation tasks.
 
-#### 5-learning.ipynb
+#### [5-learning](analysis/5-learning.ipynb)
 
 This notebook examines learning effects across tasks using mixed-effects logistic regression models. It analyzes how task success rates change as participants progress through the experiment.
 
-#### 6-incomplete-data-analysis.ipynb
+#### [6-incomplete-data-analysis](analysis/6-incomplete-data.ipynb)
 
 This notebook focuses on analyzing incomplete task attempts, comparing performance metrics between participants who completed all tasks and those who didn't, and examining factors that might contribute to task incompletion.
 
-#### 7-human-machine-comparison.ipynb
+#### [7-human-machine](analysis/7-human-machine.ipynb)
 
 This notebook compares the performance of human participants with that of algorithmic solutions to evaluation set ARC tasks. It analyzes success rates, error patterns, and solution strategies between humans and AI systems.
 
 ## Processing Kaggle Submission
 
-Follow these steps to process a Kaggle submission file. This will faciliate downstreat human-machine comparisons.
+Follow these steps to process a Kaggle submission file. This will faciliate downstream human-machine comparisons.
 
 1. Create the necessary directories:
 
