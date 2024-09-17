@@ -62,11 +62,11 @@ The H-ARC dataset is provided as a zip archive in the `data` folder. To extract 
 2. Use the following command to extract the dataset:
    - On Windows:
      ```bash
-     tar -xf data/h-arc.zip -C data
+     tar -xf data/h-arc.zip
      ```
    - On macOS and Linux:
      ```bash
-     unzip data/h-arc.zip -d data
+     unzip data/h-arc.zip
      ```
 
 After extraction, you should see several CSV files in the `data` folder.
