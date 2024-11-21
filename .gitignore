@@ -9,7 +9,7 @@ __pycache__
 data/
 
 # excluded analyses
-analysis/excluded/
+# analysis/excluded/
 
 # some source code
 src/make_dataset_csv.py
