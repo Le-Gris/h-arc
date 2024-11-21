@@ -1,5 +1,6 @@
 # virtual environment
 .venv/
+penv
 
 # cache
 __pycache__
@@ -15,3 +16,6 @@ data/
 src/make_dataset_csv.py
 
 figures/
+
+# ignore
+steps.txt
