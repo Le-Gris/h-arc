@@ -8,8 +8,7 @@ __pycache__
 
 # data
 data/
-!data/ARC_evaluation_tasks_ordered.json
-!data/ARC_training_tasks_ordered.json
+*.pkl
 
 # excluded analyses
 # analysis/excluded/
