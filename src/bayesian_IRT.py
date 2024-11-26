@@ -123,6 +123,7 @@ def bayes_irt(df, n_samples=5000, tune=1000, seed=0):
             tune=tune,
             return_inferencedata=True,
             random_seed=seed,
+            progressbar=True,
         )
 
     return model, trace

@@ -1,26 +1,21 @@
-import pymc
 import numpy as np
 import pandas as pd
-import polars as pl
-import matplotlib.pyplot as plt
-import seaborn as sns
-import arviz as az
-import scipy.stats as stats
-from matplotlib.patches import Patch
-from src.utils import *
 import argparse as ap
 import os
 import json
 from pathlib import Path
 import cloudpickle as cpkl
-from src.bayesian_IRT import bayes_irt
+import sys
+import polars as pl
 
 basepath = Path(__file__).parent.parent
+sys.path.append(str(basepath))
+
+from src.bayesian_IRT import bayes_irt
 
 
 def get_args():
     parser = ap.ArgumentParser(description="Generate IRT model results")
-    parser.add_argument("--model", type=str, help="path to model file")
     parser.add_argument("--n_samples", type=int, default=5000, help="number of samples")
     parser.add_argument(
         "--n_burn", type=int, default=1000, help="number of burn in samples"
@@ -28,9 +23,7 @@ def get_args():
     parser.add_argument(
         "--seed", type=int, default=0, help="seed for random number generator"
     )
-    parser.add_argument(
-        "--impute", type=bool, default=False, help="impute missing data"
-    )
+    parser.add_argument("--impute", action="store_true", help="impute missing data")
     return parser.parse_args()
 
 
@@ -172,7 +165,11 @@ if __name__ == "__main__":
     # save model
     imputed = "_imputed" if args.impute else ""
     with open(
-        os.path.join(basepath, "models", f"bayes_IRT_model{imputed}_{args.seed}.pkl"),
+        os.path.join(
+            basepath,
+            "models",
+            f"bayes_IRT_model_burn{args.n_burn}_N{args.n_samples}{imputed}_{args.seed}.pkl",
+        ),
         "wb",
     ) as f:
         cpkl.dump((model, trace), f)
