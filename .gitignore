@@ -20,3 +20,5 @@ figures/
 
 # ignore
 steps.txt
+*.out
+*.sbatch
