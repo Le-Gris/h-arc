@@ -9,6 +9,7 @@ __pycache__
 # data
 data/
 *.pkl
+*tar.gz
 
 # excluded analyses
 # analysis/excluded/
