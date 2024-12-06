@@ -115,12 +115,12 @@ def load_ordered_tasks():
     return df_training_tasks_ordered, df_eval_tasks_ordered
 
 
-def fill_na(df, hashed_ids, tasks):
+def fill_na(df, hashed_ids, tasks, task_type="training"):
     nan_rows = pd.DataFrame(
         {
             "hashed_id": hashed_ids,
             "task_name": tasks,
-            "task_type": "training",
+            "task_type": task_type,
             "complete": False,
             "1-shot": np.nan,
             "2-shots": np.nan,
@@ -145,8 +145,10 @@ def include_missing_data(df):
         df_eval, np.array(df_eval_tasks_ordered)
     )
     # fill missing data
-    df_training = fill_na(df_training, hashed_ids_training, tasks_training)
-    df_eval = fill_na(df_eval, hashed_ids_eval, tasks_eval)
+    df_training = fill_na(
+        df_training, hashed_ids_training, tasks_training, task_type="training"
+    )
+    df_eval = fill_na(df_eval, hashed_ids_eval, tasks_eval, task_type="evaluation")
     # combine data
     df = pd.concat([df_training, df_eval])
     return df
