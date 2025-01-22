@@ -93,6 +93,25 @@ In the `survey` folder, there are the following files:
 
 For more detailed information about the dataset, see each of the readme files.
 
+### Running the Bayesian IRT Model
+
+To analyze performance using a Bayesian Item Response Theory model:
+
+1. Generate the model:
+
+   ```bash
+   python src/generate_IRT_model_results.py --n_samples 10000 --n_burn 2000 --seed 4 --impute
+   ```
+
+   Remove the `--impute` flag to exclude missing data from the analysis.
+
+2. Generate plots and statistics:
+   ```bash
+   python src/IRT_model_plots_analysis.py --model_path models/bayes_IRT_model_burn2000_N10000_imputed_4.pkl --verbose
+   ```
+
+This will create trace plots, parameter visualizations, and detailed statistics in the `figures/` and `results/` directories.
+
 ## Analyses
 
 We include in this repository the main Jupyter notebooks used to compute reported results from our paper.
