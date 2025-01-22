@@ -1,5 +1,6 @@
 # virtual environment
 .venv/
+penv
 
 # cache
 __pycache__
@@ -9,9 +10,11 @@ __pycache__
 data/
 data_/
 survey/
+*.pkl
+*tar.gz
 
 # excluded analyses
-analysis/excluded/
+# analysis/excluded/
 
 # some source code
 src/make_dataset_csv.py
@@ -19,3 +22,7 @@ src/make_dataset_csv.py
 figures/
 
 models/*
+# ignore
+steps.txt
+*.out
+*.sbatch
