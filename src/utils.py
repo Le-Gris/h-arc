@@ -42,7 +42,7 @@ def get_summary(df, verbose=False):
     )
     if verbose:
         print(
-            f"Filtered out {df.n_unique('joint_id_task') - df_summary.n_unique('joint_id_task')}/{df.n_unique('joint_id_task')} incomplete participant task attempts"
+            f"Filtered out {df.n_unique('joint_id_task') - df_summary.n_unique('joint_id_task')}/{df.n_unique('joint_id_task')} participant task attempts"
         )
     df_summary = df_summary[
         [
@@ -59,6 +59,7 @@ def get_summary(df, verbose=False):
             "num_actions",
             "exp_name",
             "task_type",
+            "complete",
         ]
     ]
     return df_summary

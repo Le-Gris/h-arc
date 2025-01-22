@@ -120,6 +120,10 @@ def generate_irt_dataframes(trace):
         .loc[tasks]
         .values.flatten()
     )
+    epsilon_one_mean = trace.posterior["epsilon_one"].mean(dim=["chain", "draw"])
+    epsilon_two_mean = trace.posterior["epsilon_two"].mean(dim=["chain", "draw"])
+    epsilon_one_hdi = az.hdi(trace.posterior["epsilon_one"], hdi_prob=0.94)
+    epsilon_two_hdi = az.hdi(trace.posterior["epsilon_two"], hdi_prob=0.94)
 
     epsilon_one = trace.posterior["epsilon_one"].values.flatten()
     epsilon_two = trace.posterior["epsilon_two"].values.flatten()
@@ -157,7 +161,26 @@ def generate_irt_dataframes(trace):
         }
     )
 
-    return plot_df_ability, plot_df_difficulty, plot_df_epsilon
+    # create alternative dataframe for epsilon
+    plot_df_epsilon_alt = pl.DataFrame(
+        {
+            "attempt": [1, 2],
+            "epsilon_mean": [
+                epsilon_one_mean.values.item(),
+                epsilon_two_mean.values.item(),
+            ],
+            "epsilon_hdi_lower": [
+                epsilon_one_hdi.sel(hdi="lower").epsilon_one.values.item(),
+                epsilon_two_hdi.sel(hdi="lower").epsilon_two.values.item(),
+            ],
+            "epsilon_hdi_upper": [
+                epsilon_one_hdi.sel(hdi="higher").epsilon_one.values.item(),
+                epsilon_two_hdi.sel(hdi="higher").epsilon_two.values.item(),
+            ],
+        }
+    )
+
+    return plot_df_ability, plot_df_difficulty, plot_df_epsilon, plot_df_epsilon_alt
 
 
 def plot_irt_parameters(df_epsilon, plot_df_ability, plot_df_difficulty, model_name):
@@ -195,7 +218,7 @@ def plot_irt_parameters(df_epsilon, plot_df_ability, plot_df_difficulty, model_n
     ax_eps.set_xticklabels(ax_eps.get_xticks(), fontsize=TICK_SIZE)
     ax_eps.set_yticklabels(ax_eps.get_yticks(), fontsize=TICK_SIZE)
     handles = ax_eps.get_legend().legend_handles
-    labels = [r"$\epsilon_1$", r"$\epsilon_2$"]
+    labels = [r"$\gamma_1$", r"$\gamma_2$"]
     ax_eps.legend(handles, labels, fontsize=LEGEND_SIZE)
     ax_eps.grid(True, alpha=0.1)
 
@@ -647,15 +670,25 @@ if __name__ == "__main__":
     args = get_args()
     model_name = Path(args.model_path).stem
     model, trace = load_model(args.model_path)
-    total_params = (
-        len(trace.posterior.participants)  # ability parameters
-        + len(trace.posterior.tasks)  # difficulty parameters
-        + 2  # epsilon parameters
-    )
-    print(f"Total number of parameters: {total_params}")
+    # total_params = (
+    #     len(trace.posterior.participants)  # ability parameters
+    #     + len(trace.posterior.tasks)  # difficulty parameters
+    #     + 2  # epsilon parameters
+    # )
+    # print(f"Total number of parameters: {total_params}")
     plot_trace(trace, model_name)
-    plot_df_ability, plot_df_difficulty, plot_df_epsilon = generate_irt_dataframes(
-        trace
+    plot_df_ability, plot_df_difficulty, plot_df_epsilon, plot_df_epsilon_alt = (
+        generate_irt_dataframes(trace)
+    )
+    # save IRT model parameters
+    plot_df_ability.write_csv(
+        os.path.join(basepath, "data", f"{model_name}_ability_parameters.csv")
+    )
+    plot_df_difficulty.write_csv(
+        os.path.join(basepath, "data", f"{model_name}_difficulty_parameters.csv")
+    )
+    plot_df_epsilon_alt.write_csv(
+        os.path.join(basepath, "data", f"{model_name}_epsilon_parameters.csv")
     )
     plot_irt_parameters(
         plot_df_epsilon, plot_df_ability, plot_df_difficulty, model_name
