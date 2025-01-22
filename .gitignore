@@ -15,3 +15,5 @@ analysis/excluded/
 src/make_dataset_csv.py
 
 figures/
+
+models/*
