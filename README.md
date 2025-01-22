@@ -1,6 +1,8 @@
 # Human Abstraction and Reasoning Corpus (H-ARC)
 
-This repository contains the H-ARC dataset and preliminary analyses reported in our paper [H-ARC: A Robust Estimate of Human Performance on the Abstraction and Reasoning Corpus Benchmark](https://arxiv.org/abs/2409.01374).
+This repository contains scripts for preliminary analyses reported in our paper [H-ARC: A Robust Estimate of Human Performance on the Abstraction and Reasoning Corpus Benchmark](https://arxiv.org/abs/2409.01374).
+
+The data can be downloaded from our OSF repository at https://osf.io/bh8yq.
 
 Participant responses, natural language descriptions, errors and state space graphs can all be explored visually on our [project webpage](https://arc-visualizations.github.io/index.html).
 
@@ -55,36 +57,39 @@ H-ARC consists of action by action traces of humans solving ARC tasks from the b
 
 ### Extracting the dataset
 
-The H-ARC dataset is provided as a zip archive in the `data` folder. To extract it:
+The H-ARC dataset can be downloaded as a zip archive from our OSF repository. To extract it:
 
-1. Navigate to the project root directory if you're not already there.
+1. Navigate to the project root directory if you're not already there and move the zip archive there. Make sure it is named `osfstorage-archive.zip`.
 
 2. Use the following command to extract the dataset:
    - On Windows:
      ```bash
-     tar -xf data/h-arc.zip
+     tar -xf data/osfstorage-archive.zip
      ```
    - On macOS and Linux:
      ```bash
-     unzip data/h-arc.zip
+     unzip data/osfstorage-archive.zip
      ```
 
-After extraction, you should see several CSV files in the `data` folder.
+After extraction, you should see several CSV files in the `data` and `survey` folders.
 
 ## Dataset
 
 The H-ARC dataset consists of several CSV files containing different aspects of human performance on ARC tasks.
 
-All files are in CSV format. The main files include:
+All files are in CSV format. In the `data` folder, there are the following files:
 
-- `clean_data.csv` / `clean_data_incomplete.csv`: All collected data from complete / incomplete participant data
-- `clean_errors.csv` / `clean_errors_incomplete.csv`: All unique errors on each task and their counts from complete/incomplete participant data
-- `clean_summary_data.csv` / `clean_summary_data_incomplete.csv`: Attempt by attempt summary data for complete/incomplete participant data
-- `clean_feedback_data.csv`: Participant feedback
-- `clean_demographics_data.csv`: Demographic information
-- `clean_withdraw_data.csv`: Withdrawal information
+- `data.csv`: All collected data from complete / incomplete participant data
+- `incorrect_submissions.csv`: All unique errors on each task and their counts from complete/incomplete participant data
+- `summary_data.csv`: Attempt by attempt summary data for complete/incomplete participant data
 
-For more detailed information about the dataset, see [Dataset description](data/dataset_description.md).
+In the `survey` folder, there are the following files:
+
+- `feedback.csv`: Participant feedback
+- `demographics.csv`: Demographic information
+- `withdraw.csv`: Withdrawal information
+
+For more detailed information about the dataset, see the [data directory description](data/readme.md) and the [survey directory description](survey/readme.md).
 
 ## Analyses
 
@@ -148,4 +153,4 @@ This will process the JSON file and create a CSV file in the same directory with
 
 ## License
 
-This dataset is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+This dataset is licensed under the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) and can be used for any purposes.
