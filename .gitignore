@@ -14,7 +14,7 @@ survey/
 *tar.gz
 
 # excluded analyses
-# analysis/excluded/
+analysis/excluded/
 
 # some source code
 src/make_dataset_csv.py
