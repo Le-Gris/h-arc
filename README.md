@@ -150,6 +150,10 @@ This notebook focuses on analyzing incomplete task attempts, comparing performan
 
 This notebook compares the performance of human participants with that of algorithmic solutions to evaluation set ARC tasks. It analyzes success rates, error patterns, and solution strategies between humans and AI systems.
 
+#### [8-action-traces]
+
+This notebook shows how to use the data to extract action traces for further analysis.
+
 ## Processing Kaggle Submission
 
 Follow these steps to process a Kaggle submission file. This will faciliate downstream human-machine comparisons. Here we use the "Claude-3.5 (Baseline)" approach from the [ARC Prize leaderboard](https://arcprize.org/leaderboard) as an example.
