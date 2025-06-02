@@ -2,7 +2,7 @@
 
 This repository contains scripts for preliminary analyses reported in our paper [H-ARC: A Robust Estimate of Human Performance on the Abstraction and Reasoning Corpus Benchmark](https://arxiv.org/abs/2409.01374).
 
-The data can be downloaded from our OSF repository at https://osf.io/bh8yq.
+The data can be downloaded from our [OSF repository](https://osf.io/bh8yq).
 
 Participant responses, natural language descriptions, errors and state space graphs can all be explored visually on our [project webpage](https://arc-visualizations.github.io/index.html).
 
