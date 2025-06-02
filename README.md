@@ -150,7 +150,7 @@ This notebook focuses on analyzing incomplete task attempts, comparing performan
 
 This notebook compares the performance of human participants with that of algorithmic solutions to evaluation set ARC tasks. It analyzes success rates, error patterns, and solution strategies between humans and AI systems.
 
-#### [8-action-traces]
+#### [8-action-traces](analysis/8-action-traces.ipynb)
 
 This notebook shows how to use the data to extract action traces for further analysis.
 
