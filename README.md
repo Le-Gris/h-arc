@@ -2,6 +2,8 @@
 
 This repository contains scripts for preliminary analyses reported in our paper (under review).
 
+![Figure 2: Example of a human actions traces from H-ARC and corresponding natural language descriptions](figures/arc-preprint-figure2.png)
+
 The data can be downloaded from our [OSF repository](https://osf.io/bh8yq).
 
 Participant responses, natural language descriptions, errors and state space graphs can all be explored visually on our [project webpage](https://arc-visualizations.github.io/index.html).
