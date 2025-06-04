@@ -82,14 +82,14 @@ All files are in CSV format. In the `data` folder, there are the following files
 - `data.csv`: All collected data from complete / incomplete participant data
 - `incorrect_submissions.csv`: All unique errors on each task and their counts from complete/incomplete participant data
 - `summary_data.csv`: Attempt by attempt summary data for complete/incomplete participant data
-- `readme.md`: data directory description
+- [`readme.md`](data/readme.md): data directory description
 
 In the `survey` folder, there are the following files:
 
 - `feedback.csv`: Participant feedback
 - `demographics.csv`: Demographic information
 - `withdraw.csv`: Withdrawal information
-- `readme.md`: survey directory description
+- [`readme.md`](survey/readme.md): survey directory description
 
 For more detailed information about the dataset, see each of the readme files.
 
