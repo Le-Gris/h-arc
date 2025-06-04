@@ -19,19 +19,18 @@ This file contains participant feedback.
 
 This file contains demographic information about the participants.
 
-| Column name      | Description                                                |
-| ---------------- | ---------------------------------------------------------- |
-| exp_name         | Experiment name (internal identifier)                      |
-| task_type        | Type of task (training or evaluation set)                  |
-| hashed_id        | Anonymized participant identifier                          |
-| age              | Age of the participant                                     |
-| gender           | Gender of the participant                                  |
-| race             | Race of the participant                                    |
-| education_level  | Education level of the participant                         |
-| household_income | Household income of the participant                        |
-| normal_vision    | Boolean indicating if the participant has normal vision    |
-| color_blind      | Boolean indicating if the participant is color blind       |
-| fluent_english   | Boolean indicating if the participant is fluent in English |
+| Column name     | Description                                                |
+| --------------- | ---------------------------------------------------------- |
+| exp_name        | Experiment name (internal identifier)                      |
+| task_type       | Type of task (training or evaluation set)                  |
+| hashed_id       | Anonymized participant identifier                          |
+| age             | Age of the participant                                     |
+| gender          | Gender of the participant                                  |
+| race            | Race of the participant                                    |
+| education_level | Education level of the participant                         |
+| normal_vision   | Boolean indicating if the participant has normal vision    |
+| color_blind     | Boolean indicating if the participant is color blind       |
+| fluent_english  | Boolean indicating if the participant is fluent in English |
 
 ## withdraw_data.csv
 
