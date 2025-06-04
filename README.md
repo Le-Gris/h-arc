@@ -1,6 +1,6 @@
 # Human Abstraction and Reasoning Corpus (H-ARC)
 
-This repository contains scripts for preliminary analyses reported in our paper [H-ARC: A Robust Estimate of Human Performance on the Abstraction and Reasoning Corpus Benchmark](https://arxiv.org/abs/2409.01374).
+This repository contains scripts for preliminary analyses reported in our paper (under review).
 
 The data can be downloaded from our [OSF repository](https://osf.io/bh8yq).
 
