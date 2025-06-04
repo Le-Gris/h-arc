@@ -2,7 +2,7 @@
 
 This repository contains scripts for preliminary analyses reported in our paper (under review).
 
-![Figure 2: Example of a human actions traces from H-ARC and corresponding natural language descriptions](figures/arc-preprint-figure2.png)
+![Figure 2: Example of a human actions traces from H-ARC and corresponding natural language descriptions](figures/arc-preprint-figure2.png){style="background-color: white; padding: 10px;"}
 
 The data can be downloaded from our [OSF repository](https://osf.io/bh8yq).
 
