@@ -1,6 +1,6 @@
 # Human Abstraction and Reasoning Corpus (H-ARC)
 
-This repository contains scripts for preliminary analyses reported in our paper (under review).
+This repository contains scripts and additional information about H-ARC to accompany our paper (under review).
 
 ![Figure 2: Example of a human actions traces from H-ARC and corresponding natural language descriptions](figures/arc-preprint-figure2.png){style="background-color: white; padding: 10px;"}
 
