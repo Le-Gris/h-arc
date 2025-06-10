@@ -6,9 +6,13 @@ This repository contains scripts and additional information about H-ARC to accom
 
 The data can be downloaded from our [OSF repository](https://osf.io/bh8yq).
 
+The experiment platform can be viewed at [this link](https://exps.gureckislab.org/e/assumption-fast-natural/#/).
+
 Participant responses, natural language descriptions, errors and state space graphs can all be explored visually on our [project webpage](https://arc-visualizations.github.io/index.html).
 
-H-ARC consists of action by action traces of humans solving ARC tasks from the both the training and evaluation sets using an interface and setup similar to François Chollet's initial proposal. The original dataset can be found [here](https://github.com/fchollet/ARC-AGI).
+H-ARC consists of action by action traces of humans solving ARC tasks from the both the training and evaluation sets using an interface and setup similar to François Chollet's initial proposal. The online experiment can be explored [here]() and the code is available in an [accompanying Github repo]().
+
+The original ARC dataset can be found [here](https://github.com/fchollet/ARC-AGI).
 
 ## Citing our work
 
