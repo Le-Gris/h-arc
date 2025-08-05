@@ -11,7 +11,10 @@ Intuitively, IRT models disambiguate between different latent variables that are
 The model calculates the mean probability of success for both the training and evaluation sets for each attempt. This is computed by averaging the predicted probabilities over all participants and tasks within a given set.
 
 The formula for the mean probability of success is:
-$P_{\text{set}}(k) = \frac{1}{N_p N_t} \sum_{i=1}^{N_p} \sum_{j \in \mathcal{T}_{\text{set}}} \text{logit}^{-1}(\hat{\alpha}_i - \hat{\beta}_j + \hat{\gamma}_k)$ where $\mathcal{T}_{\text{set}}$ represents either training or evaluation tasks, $k \in \{0,1,2\}$ is the attempt number and $P_{\text{set}}(k)$ is the mean probability of success for the training or evaluation set at attempt $k$.
+
+$$P_{\text{set}}(k) = \frac{1}{N_p N_t} \sum_{i=1}^{N_p} \sum_{j \in \mathcal{T}_{\text{set}}} \text{logit}^{-1}(\hat{\alpha}_i - \hat{\beta}_j + \hat{\gamma}_k)$$
+
+where $\mathcal{T}_{\text{set}}$ represents either training or evaluation tasks, $k \in \{0,1,2\}$ is the attempt number and $P_{\text{set}}(k)$ is the mean probability of success for the training or evaluation set at attempt $k$.
 
 In this equation:
 
