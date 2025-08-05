@@ -97,7 +97,7 @@ In the `survey` folder, there are the following files:
 
 For more detailed information about the dataset, see each of the readme files.
 
-### Running the Bayesian IRT Model
+## Bayesian IRT Model
 
 To analyze performance using a Bayesian Item Response Theory model:
 
@@ -115,6 +115,8 @@ To analyze performance using a Bayesian Item Response Theory model:
    ```
 
 This will create trace plots, parameter visualizations, and detailed statistics in the `figures/` and `results/` directories.
+
+For more details, see the model [`readme.md`](models/README.md) file.
 
 ## Analyses
 
