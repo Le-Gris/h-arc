@@ -11,7 +11,7 @@ import polars as pl
 basepath = Path(__file__).parent.parent
 sys.path.append(str(basepath))
 
-from src.bayesian_IRT import bayes_irt
+from models.bayesian_IRT import bayes_irt
 
 
 def get_args():

@@ -21,7 +21,7 @@ src/make_dataset_csv.py
 
 figures/
 
-models/*
+models/*.pkl
 # ignore
 steps.txt
 *.out
