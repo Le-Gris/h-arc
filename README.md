@@ -1,6 +1,6 @@
 # Human Abstraction and Reasoning Corpus (H-ARC)
 
-This repository contains scripts and additional information about H-ARC to accompany our paper (under review).
+This repository contains scripts and additional information about H-ARC to accompany our paper [published in](https://www.nature.com/articles/s41597-025-05687-1) the Scientific Data journal.
 
 ![Figure 2: Example of a human actions traces from H-ARC and corresponding natural language descriptions](figures/arc-preprint-figure2-background.png)
 
@@ -15,12 +15,18 @@ The original ARC dataset can be found [here](https://github.com/fchollet/ARC-AGI
 ## Citing our work
 
 ```
-@article{legris2024harcrobustestimatehuman,
-      title={H-ARC: A Robust Estimate of Human Performance on the Abstraction and Reasoning Corpus Benchmark},
-      author={Solim LeGris and Wai Keen Vong and Brenden M. Lake and Todd M. Gureckis},
-      year={2024},
-      journal={arXiv preprint arxiv:2409.01374}
-      url={https://arxiv.org/abs/2409.01374},
+@article{legrisComprehensiveBehavioralDataset2025,
+  title = {A {{Comprehensive Behavioral Dataset}} for the {{Abstraction}} and {{Reasoning Corpus}}},
+  author = {LeGris, Solim and Vong, Wai Keen and Lake, Brenden M. and Gureckis, Todd M.},
+  year = {2025},
+  month = aug,
+  journal = {Scientific Data},
+  volume = {12},
+  number = {1},
+  pages = {1380},
+  issn = {2052-4463},
+  doi = {10.1038/s41597-025-05687-1},
+  abstract = {The Abstraction and Reasoning Corpus (ARC) is a visual program synthesis benchmark designed to test out-of-distribution generalization in machines. Comparing AI algorithms to human performance is essential to measure progress on these problems. In this paper, we present H-ARC (Human-ARC): a novel large-scale dataset containing solution attempts from over 1700 humans on ARC problems. The dataset spans the full set of 400 training and 400 evaluation tasks from the original ARC benchmark, and it is the largest human evaluation to date. By publishing the dataset, we contribute human responses to each problem, step-by-step behavioral action traces from the ARC user-interface, and natural-language solution descriptions of the inferred program/rule. We believe this dataset will be of value to researchers, both in cognitive science and AI, since it offers the potential to facilitate the discovery of underlying mechanisms supporting abstraction and reasoning in people. The insights to be gained from these data not only have value for cognitive science, but could in turn inform the design of more efficient, human-like AI algorithms.}
 }
 ```
 
