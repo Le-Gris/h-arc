@@ -138,7 +138,7 @@ This notebook looks at some aspects of the ARC dataset structure.
 
 This notebook computes basic performance metrics on the H-ARC dataset, including overall solve rates, action counts, and time-related statistics for both training and evaluation tasks.
 
-#### [2-demogrpahics](analysis/2-demographics.ipynb)
+#### [2-demographics](analysis/2-demographics.ipynb)
 
 This notebook looks at some basic demographics data from our pool of participants.
 
